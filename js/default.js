@@ -25,4 +25,43 @@ var refresh =  function(){
 }
 update();
 
+function  getFileName() {
+  return  window.location.href.spilit('/').pop();
+}
+
+var filename  = getFileName();
+var opt;
+if(filename === 'other.html'){
+  opt = document.querySelector('option[value="other.html"]');
+}else{
+  opt = document.querySlector('option[value="index.html"]');
+}
+opt.selected  = true;
+
+document.getElementById('form').select.onchange = fuction(){
+  location.href = document.getElementById('form').select.value;
+}
+var last_date = getCookie('lastDate');
+if(last_date){
+  document.getElemetById('cookie').textContent  = '前回訪れた時間:'  +last_date;
+}else{
+  documet.getElemetById('cookie').textContent = 'はじめまして';
+}
+
+var current_time  = new Date();
+setCookie('lastDate', current_time.toString(),7);
+
+document.getElementById('remove_cookie').onsubmit = function(){
+    setCookie('lastDate', "", 0);
+};
+}
+
+var thmubs  = document.querySelectorAll('thumb');
+for(idx in  thmubs){
+  thmubs[idx].onclick = function(){
+      document.getElementById("bigimg").src = 'img/' + this.dateset.image + '.PNG';
+  }
+}
+  
+
   
