@@ -11,7 +11,7 @@ var separate_time = function(time){
   var target  = new Date(2018,1,1,0,0,0,0);
   var diff  = target.getTime() - now.getTime();
   var counter = separate_time(diff);
-document.getElementById('countdown').textContent =
+document.getElementById('countdown').textContent 
   '来年の新年まであと' +
   counter[3]  + '日' +
   counter[2]  + '時間' +
