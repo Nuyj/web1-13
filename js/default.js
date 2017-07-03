@@ -5,7 +5,8 @@ var separate_time = function(time){
   var days    = Math.floor(time  / 1000  / 60  / 60  / 24);
   return[sec, min,  hours,  days];
   }
-  
+
+ var  update =  funcion(){  
   var now = new Date();
   var target  = new Date(2018,1,1,0,0,0,0);
   var diff  = target.getTime() - now.getTime();
@@ -16,3 +17,12 @@ document.getElementById('countdown').textContent =
   counter[2]  + '時間' +
   counter[1]  + '分' +
   counter[0]  + '秒' ;
+refresh();
+}
+  
+var refresh =  function(){
+  setTimeOut(update,  1000);
+}
+update();
+
+  
