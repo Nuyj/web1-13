@@ -1,17 +1,15 @@
 var separate_time = function(time){
-  var sec     = time.getSeconds();
-  var min     = time.getMinutes();
-  var hours   = time.getHours();
-  var days    = time.getDate();
-  var month   = time.getMonth();
-  var year  = time.getFullYear();
-  return[sec, min,  hours,  days, month,  year];
+  var sec     = Math.floor((time  / 1000) %  60);
+  var min     = Math.floor((time  / 1000  / 60) % 60);
+  var hours   = Math.floor((time  / 1000  / 60 /  60) % 24);
+  var days    = Math.floor(time  / 1000  / 60  / 60  / 24);
+  return[sec, min,  hours,  days];
   }
   
   var now = new Date();
   var target  = new Date(2018,1,1,0,0,0,0);
-  var diff  =target.getTime() - now.getTime();
-  var counter = separate_time(now);
+  var diff  = target.getTime() - now.getTime();
+  var counter = separate_time(diff);
 document.getElementById('countdown').textContent =
   '来年の新年まであと' +
   counter[5]  + '年' +
