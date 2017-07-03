@@ -38,7 +38,7 @@ if(filename === 'other.html'){
 }
 opt.selected  = true;
 
-document.getElementById('form').select.onchange = fuction(){
+document.getElementById('form').select.onchange = function(){
   location.href = document.getElementById('form').select.value;
 }
 var last_date = getCookie('lastDate');
