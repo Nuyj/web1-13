@@ -45,7 +45,7 @@ document.getElementById('form').select.onchange = function(){
 function  setCookie(c_name,value,expiredays){
   var extime  = new Date().getTime();
   var cltime  = new Date(extime + (60*60*24*1000*expiredays));
-  var exdate  = new Date  cltime.toUTString();
+  var exdate  = cltime.toUTString();
   var s="";
   s +=  ";  expires=" +exdate+";  ";
 }else{
