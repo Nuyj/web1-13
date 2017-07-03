@@ -47,9 +47,10 @@ function  setCookie(c_name,value,expiredays){
   var cltime  = new Date(extime + (60*60*24*1000*expiredays));
   var exdate  = cltime.toUTString();
   var s="";
-  s +=  ";  expires=" +exdate+";  ";
+  if(expiredays){
+  s += "; expires=" +exdate+"; ";
 }else{
-    s +=  ";  ";
+    s += "; ";
 }
 document.cookie=s;
 }
