@@ -6,7 +6,7 @@ var separate_time = function(time){
   return[sec, min,  hours,  days];
   }
 
- var  update =  funcion(){  
+ var  update =  function(){  
   var now = new Date();
   var target  = new Date(2018,1,1,0,0,0,0);
   var diff  = target.getTime() - now.getTime();
