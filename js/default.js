@@ -16,12 +16,12 @@ document.getElementById('countdown').textContent =
   counter[3]  + '日' +
   counter[2]  + '時間' +
   counter[1]  + '分' +
-  counter[0]  + '秒' ;
+  counter[0]  + '秒';
 refresh();
 }
   
 var refresh =  function(){
-  setTimeOut(update,  1000);
+  setTimeout(update,  1000);
 }
 update();
 
