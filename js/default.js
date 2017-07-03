@@ -74,7 +74,7 @@ var last_date = getCookie('lastDate');
 if(last_date){
   document.getElemetById('cookie').textContent  = '前回訪れた時間:'  +last_date;
 }else{
-  documet.getElemetById('cookie').textContent = 'はじめまして';
+  document.getElemetById('cookie').textContent = 'はじめまして';
 }
 
 var current_time  = new Date();
